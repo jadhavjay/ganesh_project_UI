@@ -1,5 +1,5 @@
-import React from 'react'
-import classes from './footer.module.css'
+import React from "react";
+import classes from "./footer.module.css";
 
 const Footer = () => {
   return (
@@ -8,26 +8,26 @@ const Footer = () => {
         <div className={classes.col}>
           <h2>About the App</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quisquam illum quam optio autem suscipit incidunt dicta dolorum eum dolores recusandae laboriosam expedita quo facilis, numquam et.
-            Delectus atque dolorum sapiente.
+            NoBroker rental platform lets you find your dream house without any
+            broker acting as a middleman. This is the most convenient way of
+            finding your house without paying hefty brokerage.
           </p>
         </div>
         <div className={classes.col}>
           <h2>Contacts</h2>
           <span>Phone: +123 456 789</span>
-          <span>YouTube: WebDevMania</span>
-          <span>GitHub: WebDevMania</span>
+          <span>YouTube: IamGaneshMahale</span>
+          <span>GitHub: IamGaneshMahale</span>
         </div>
         <div className={classes.col}>
           <h2>Location</h2>
-          <span>Continent: Europe</span>
-          <span>Country: Bulgaria</span>
-          <span>Current Location: Bulgaria</span>
+          <span>Continent: Asia</span>
+          <span>Country: India</span>
+          <span>Current Location: Mumbai</span>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
