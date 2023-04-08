@@ -81,9 +81,9 @@ const Properties = () => {
       }
     })
 
-    const queryStr = `type=${options.type}&continent=${options.continent}&priceRange=${options.priceRange}`
+    const querySTR = `type=${options.type}&continent=${options.continent}&priceRange=${options.priceRange}`
 
-    navigate(`/properties?${queryStr}`, { replace: true })
+    navigate(`/properties?${querySTR}`, { replace: true })
     setFilteredProperties(filteredProperties)
     console.log(filteredProperties)
   }
