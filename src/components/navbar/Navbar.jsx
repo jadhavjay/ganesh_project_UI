@@ -90,12 +90,15 @@ const Navbar = () => {
           Book My House <BsHouseDoor />
         </Link>
         <ul className={classes.center}>
-          <li onClick={scrollToTop} className={classes.listItem}>
+          <Link to ="/" className={classes.listItem}>
             Home
-          </li>
+          </Link>
           <li className={classes.listItem}>About</li>
           <li className={classes.listItem}>Featured</li>
           <li className={classes.listItem}>Contacts</li>
+          <Link to={`/myProperties/${user._id}`}  className={classes.listItem}>
+          My Properties
+          </Link>
         </ul>
         <div className={classes.right}>
           {!user ? (

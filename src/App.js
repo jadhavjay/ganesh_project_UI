@@ -12,13 +12,14 @@ import { useSelector } from 'react-redux'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import './App.css';
 import { useEffect } from 'react';
+import MyProperties from './myProperties/myProperties';
 
 function App() {
   const { user } = useSelector((state) => state.auth)
   const url = useLocation().pathname
 
   useEffect(() => {
-    url && window.scrollTo(0, 0)
+    url && window.scrollTo(120, 130)
   }, [url])
 
   return (
@@ -39,13 +40,19 @@ function App() {
         } />
         <Route path='/signup' element={!user ? <Signup /> : <Navigate to='/' />} />
         <Route path='/signin' element={!user ? <Signin /> : <Navigate to='/' />} />
+        <Route path='/myProperties/:id' element={user ? 
+          <>
+          <Navbar />
+          <MyProperties />
+          </>
+        : <Navigate to='/' />} />
         <Route path='/properties' element={user ?
           <>
             <Navbar />
             <Properties />
             <Footer />
           </>
-          : <Navigate to='/signin' />} />
+          : <Navigate to='/' />} />
         <Route path='/propertyDetail/:id' element={
           user
             ?
