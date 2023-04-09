@@ -90,14 +90,44 @@ const Navbar = () => {
           Book My House <BsHouseDoor />
         </Link>
         <ul className={classes.center}>
-          <Link to ="/" className={classes.listItem}>
+          <Link
+            to="/"
+            className={classes.listItem}
+            style={{ textDecoration: "none" }}
+          >
             Home
           </Link>
-          <li className={classes.listItem}>About</li>
-          <li className={classes.listItem}>Featured</li>
-          <li className={classes.listItem}>Contacts</li>
-          <Link to={`/myProperties/${user._id}`}  className={classes.listItem}>
-          My Properties
+          {/* <li className={classes.listItem}>About</li> */}
+
+          {/* <Link
+            to="/"
+            className={classes.listItem}
+            style={{ textDecoration: "none" }}
+          > */}
+          <li className={classes.listItem}>
+            <a
+              href="#Featured Property"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              Featured
+            </a>
+          </li>
+          {/* </Link> */}
+
+          <li className={classes.listItem}>
+            <a
+              href="#contactus"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              Contacts{" "}
+            </a>
+          </li>
+          <Link
+            to={`/myProperties/${user._id}`}
+            className={classes.listItem}
+            style={{ textDecoration: "none" }}
+          >
+            My Properties
           </Link>
         </ul>
         <div className={classes.right}>
@@ -172,7 +202,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="featured"
-                name="feature"
+                name="featured"
                 onChange={handleState}
                 autocomplete="off"
               />

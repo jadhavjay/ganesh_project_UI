@@ -49,6 +49,7 @@
   list-style: none;
   cursor: pointer;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .center > .listItem {

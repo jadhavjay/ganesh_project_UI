@@ -1,21 +1,23 @@
-import React from 'react'
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { AiOutlineSearch } from 'react-icons/ai'
-import classes from './hero.module.css'
+import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AiOutlineSearch } from "react-icons/ai";
+import classes from "./hero.module.css";
 
 const Hero = () => {
-  const [type, setType] = useState("beach")
-  const [continent, setContinent] = useState("0")
-  const [priceRange, setPriceRange] = useState("0")
-  const navigate = useNavigate()
+  const [type, setType] = useState("beach");
+  const [continent, setContinent] = useState("0");
+  const [priceRange, setPriceRange] = useState("0");
+  const navigate = useNavigate();
 
   // TODO here or somewhere home(fetching properties)
 
   const handleSearch = () => {
     // navigating to properties
-    navigate(`/properties?type=${type}&continent=${continent}&priceRange=${priceRange}`)
-  }
+    navigate(
+      `/properties?type=${type}&continent=${continent}&priceRange=${priceRange}`
+    );
+  };
 
   return (
     <div className={classes.container}>
@@ -46,11 +48,14 @@ const Hero = () => {
             <option value="4">North America</option>
             <option value="5">Oceania</option>
           </select>
-          <AiOutlineSearch className={classes.searchIcon} onClick={handleSearch} />
+          <AiOutlineSearch
+            className={classes.searchIcon}
+            onClick={handleSearch}
+          />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
